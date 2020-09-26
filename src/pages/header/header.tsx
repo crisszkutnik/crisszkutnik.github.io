@@ -1,19 +1,26 @@
 import React from "react"
+import Logo from "../../assets/logo"
 import "./header.scss"
+import GH_LOGO from "../../assets/github"
+import Mail from "../../assets/mail"
+import Ellipse from "./ellipse"
+import LanguageSlider from "./LanguageSlider"
 
 export default function Header() {
   return (
     <div id="header">
-      <nav>
-        <div>
-          <a href="#">Home</a>
-          <a href="#">Skills and experience</a>
-          <a href="#">Projects</a>
-          <a href="#">Contact</a>
-        </div>
-      </nav>
-      <div id="header-content">
-        <div id="left-side">
+      <div id="left-side">
+        <nav>
+          <Logo />
+          <div>
+            <a href="#">Home</a>
+            <a href="#">Skills and experience</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+          </div>
+          <LanguageSlider />
+        </nav>
+        <div id="left-content">
           <div id="name-text">
             <p>Hello, I am</p>
             <h1>CRISTOBAL SZKUTNIK</h1>
@@ -30,11 +37,21 @@ export default function Header() {
           </div>
           <div id="header-button">
             <a href="#">Know me</a>
+            <Ellipse />
           </div>
         </div>
-        <div id="right-side">
-
+      </div>
+      <div id="right-side">
+        <hr />
+        <div>
+          <a href="https://github.com/crisszkutnik" target="_blank">
+            <GH_LOGO />
+          </a>
+          <a href="mailto:crisszkutnik@gmail.com" target="_blank">
+            <Mail />
+          </a>
         </div>
+        <hr />
       </div>
     </div>
   )

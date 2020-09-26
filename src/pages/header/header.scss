@@ -1,4 +1,4 @@
-//@use './styles';
+$left-padding: 300px;
 
 #header {
   width: 100%;
@@ -6,35 +6,95 @@
   background: $deep-blue;
   color: white;
   font-family: $poppins;
-
-  nav {
-    a {
-      color: white;
-      text-decoration: none;
-    }
-  }
+  display: flex;
 
   nav {
     width: 100%;
     height: 50px;
-  }
-
-  #header-content {
-    height: calc(100% - 50px);
+    padding-left: $left-padding;
     display: flex;
-    width: 100%;
-	 justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 40px;
+      height: 40px;
+      margin-right: 50px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      transition: all 0.25s ease-in-out;
+    }
+
+    a:hover {
+      color: $red;
+    }
+
+    $margin: 25px;
+
+    a:nth-child(2) {
+      margin: 0 $margin;
+    }
+
+    a:nth-child(3) {
+      margin-right: $margin;
+    }
+
+    #lang-slider {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      div {
+        width: 50px;
+        height: 20px;
+        background: rgba(196, 196, 196, 0.25);
+        border-radius: 20px;
+      }
+
+      $dot-dimensions: 25px;
+
+      #dot {
+        height: $dot-dimensions;
+        width: $dot-dimensions;
+        border: 2px solid white;
+        position: absolute;
+        transform: translateY(($dot-dimensions % 10) / -2);
+        // Some math to center it
+        background-size: cover;
+        background-position: center;
+        animation: all 0.25s ease-in-out;
+      }
+
+      .uk-flag {
+        background-image: url("../../assets/uk-flag.svg");
+      }
+
+      .spain-flag {
+        background-image: url("../../assets/spain-flag.png");
+      }
+    }
   }
 
   #left-side {
     width: 80%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    #left-content {
+      height: calc(100% - 50px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     #name-text,
     #description-text,
     #header-button {
-      padding-left: 350px;
-      width: 80%;
+      padding-left: $left-padding;
+      width: 100%;
     }
 
     #name-text {
@@ -66,9 +126,20 @@
       a {
         color: white;
         text-decoration: none;
-        padding: 20px 20px;
+        padding: 10px 25px;
         font-size: 1.5em;
         background: $red;
+      }
+
+      svg {
+        position: fixed;
+        bottom: 0;
+        right: 400px;
+        transform: translateY(10px);
+        /*
+          SVG export from figma was not working corretly. This
+          translate positions the circle correctly
+        */
       }
     }
   }
@@ -76,6 +147,35 @@
   #right-side {
     width: 20%;
     height: 100%;
-    background: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      justify-content: space-around;
+    }
+
+    svg {
+      width: 60px;
+      height: 60px;
+      fill: white;
+      opacity: 0.5;
+      transition: all 0.25s ease-in-out;
+    }
+
+    svg:hover {
+      fill: $red;
+    }
+  }
+
+  hr {
+    height: calc(50% - 150px);
+    width: 3px;
+    background: $red;
+    border: none;
   }
 }
