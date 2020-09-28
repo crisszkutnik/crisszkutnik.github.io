@@ -1,4 +1,4 @@
-$left-padding: 300px;
+$left-padding: 15vw;
 
 #header {
   width: 100%;
@@ -25,6 +25,7 @@ $left-padding: 300px;
       color: white;
       text-decoration: none;
       transition: all 0.25s ease-in-out;
+      font-size: 1em;
     }
 
     a:hover {
@@ -55,6 +56,11 @@ $left-padding: 300px;
 
       $dot-dimensions: 25px;
 
+      #dot-container {
+        cursor: pointer;
+        margin: 0 10px;
+      }
+
       #dot {
         height: $dot-dimensions;
         width: $dot-dimensions;
@@ -64,7 +70,6 @@ $left-padding: 300px;
         // Some math to center it
         background-size: cover;
         background-position: center;
-        animation: all 0.25s ease-in-out;
       }
 
       .uk-flag {
@@ -119,6 +124,7 @@ $left-padding: 300px;
         color: $grey;
         width: 55%;
         margin: 100px 0;
+        font-size: 1em;
       }
     }
 
@@ -134,7 +140,6 @@ $left-padding: 300px;
       svg {
         position: fixed;
         bottom: 0;
-        right: 400px;
         transform: translateY(10px);
         /*
           SVG export from figma was not working corretly. This
@@ -160,8 +165,6 @@ $left-padding: 300px;
     }
 
     svg {
-      width: 60px;
-      height: 60px;
       fill: white;
       opacity: 0.5;
       transition: all 0.25s ease-in-out;
@@ -177,5 +180,52 @@ $left-padding: 300px;
     width: 3px;
     background: $red;
     border: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  #header {
+    font-size: 12px;
+  }
+
+  #header-button svg {
+    height: 180px;
+    right: 12vw;
+  }
+
+  #right-side svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  #description-text p {
+    margin: 100px 0;
+  }
+
+  #lang-slider {
+    margin-left: 25%;
+  }
+}
+
+@media (min-width: 1500px) {
+  #header {
+    font-size: 16px;
+  }
+
+  #right-side svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  #description-text p {
+    margin: 100px 0;
+  }
+
+  #header-button svg {
+    right: 22.5vw;
+  }
+
+  #lang-slider {
+    margin-left: 28%;
   }
 }
