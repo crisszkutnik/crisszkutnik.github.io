@@ -1,10 +1,10 @@
-import React from "react"
-import Logo from "../../assets/logo"
-import "./header.scss"
-import GH_LOGO from "../../assets/github"
-import Mail from "../../assets/mail"
-import Ellipse from "./ellipse"
-import LanguageSlider from "./LanguageSlider"
+import React from "react";
+import Logo from "../../assets/logo";
+import "./header.scss";
+import GH_LOGO from "../../assets/github";
+import Mail from "../../assets/mail";
+import Bottom from "../../assets/bottom.png";
+import LanguageSlider from "./LanguageSlider";
 
 export default function Header() {
   return (
@@ -37,7 +37,6 @@ export default function Header() {
           </div>
           <div id="header-button">
             <a href="#">Know me</a>
-            <Ellipse />
           </div>
         </div>
       </div>
@@ -53,6 +52,7 @@ export default function Header() {
         </div>
         <hr />
       </div>
+      <img src={ Bottom }/>
     </div>
   )
 }
