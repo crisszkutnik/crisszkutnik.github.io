@@ -1,25 +1,15 @@
 import React from "react";
-import Logo from "../../assets/logo";
 import "./header.scss";
 import GH_LOGO from "../../assets/github";
 import Mail from "../../assets/mail";
-import Bottom from "../../assets/bottom.png";
-import LanguageSlider from "./LanguageSlider";
+import Bottom from "./bottom/bottom"
+import Nav from "./nav/nav"
 
 export default function Header() {
   return (
     <div id="header">
       <div id="left-side">
-        <nav>
-          <Logo />
-          <div>
-            <a href="#">Home</a>
-            <a href="#">Skills and experience</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
-          </div>
-          <LanguageSlider />
-        </nav>
+        <Nav />
         <div id="left-content">
           <div id="name-text">
             <p>Hello, I am</p>
@@ -41,7 +31,7 @@ export default function Header() {
         </div>
       </div>
       <div id="right-side">
-        <hr />
+        <hr className="right-bar" />
         <div>
           <a href="https://github.com/crisszkutnik" target="_blank">
             <GH_LOGO />
@@ -50,9 +40,9 @@ export default function Header() {
             <Mail />
           </a>
         </div>
-        <hr />
+        <hr className="right-bar" />
       </div>
-      <img src={ Bottom }/>
+      <Bottom />
     </div>
   )
 }
