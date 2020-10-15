@@ -26,7 +26,7 @@ export default function Header() {
             </p>
           </div>
           <div id="header-button">
-            <a href="#"><p>Know me</p></a>
+            <a href="#"><span>Know me</span></a>
           </div>
         </div>
       </div>
