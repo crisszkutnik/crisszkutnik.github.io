@@ -1,203 +1,268 @@
 #header {
-	width: 100%;
-	height: 100vh;
-	background: $deep-blue;
-	color: white;
-	font-family: $poppins;
-	display: flex;
+  width: 100%;
+  height: 100vh;
+  background: $deep-blue;
+  color: white;
+  font-family: $poppins;
+  display: flex;
 
-	#bottomsvg {
-		position: absolute;
-		bottom: 0;
-	}
+  #bottomsvg {
+    position: absolute;
+	 bottom: 0;
+	 pointer-events: none;
+  }
 
-	#left-side {
-		width: 80%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
+  #left-side {
+    display: flex;
+    flex-direction: column;
 
-		#left-content {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-		}
+    #left-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-		#name-text,
-		#description-text,
-		#header-button {
+    #name-text,
+    #description-text,
+    #header-button {
+      width: 100%;
+    }
+
+    #name-text {
+      p {
+        color: $red;
+        font-size: 2em;
+      }
+
+      h1 {
+        font-size: 4em;
+      }
+
+      h2 {
+        font-size: 3.5em;
+        color: $grey;
+        font-weight: 500;
+      }
+    }
+
+    #description-text {
+      p {
+        color: $grey;
+      }
+    }
+
+    #header-button {
+      a {
+        color: white;
+        text-decoration: none;
+		  height: 50px;
+		  line-height: 50px;
+		  text-align: center;
+		  width: 150px;
+		  background: $red;
+		  cursor: pointer;
+		  display: flex;
+		  transition: all 0.25s ease-in-out;
+      }
+
+		p {
 			width: 100%;
+			font-size: 1.5em;
 		}
 
-		#name-text {
-			p {
-				color: $red;
-				font-size: 2em;
-			}
+		$translate: 10px;
+		$shadow-color: #0b0b14;
 
-			h1 {
-				font-size: 4em;
-			}
+      a:hover {
+        -webkit-box-shadow: -$translate $translate 0px 0px $shadow-color;
+        -moz-box-shadow: -$translate $translate 0px 0px $shadow-color;
+		  box-shadow: -$translate $translate 0px 0px $shadow-color;
+		  transform: translateX($translate);
+      }
+    }
+  }
 
-			h2 {
-				font-size: 3.5em;
-				color: $grey;
-				font-weight: 500;
-			}
-		}
+  #right-side {
+    display: flex;
+    justify-content: center;
 
-		#description-text {
-			p {
-				color: $grey;
-				margin: 100px 0;
-				font-size: 1em;
-			}
-		}
+    div {
+      display: flex;
+      justify-content: space-around;
+    }
 
-		#header-button {
-			a {
-				color: white;
-				text-decoration: none;
-				padding: 10px 25px;
-				font-size: 1.5em;
-				background: $red;
-			}
+    svg {
+      fill: white;
+      opacity: 0.5;
+      transition: all 0.25s ease-in-out;
+    }
 
-			svg {
-				position: fixed;
-				bottom: 0;
-				transform: translateY(20px) translateX(-15px);
-				left: 0;
-				/*
-			 SVG export from figma was not working correctly. This
-			 translate positions the circle correctly
-			*/
-			}
-		}
-	}
-
-	#right-side {
-		width: 20%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-
-		div {
-			display: flex;
-			flex-direction: column;
-			height: 300px;
-			justify-content: space-around;
-		}
-
-		svg {
-			fill: white;
-			opacity: 0.5;
-			transition: all 0.25s ease-in-out;
-		}
-
-		svg:hover {
-			fill: $red;
-			opacity: 1;
-		}
-	}
-
-	hr.right-bar {
-		height: calc(50% - 150px);
-		width: 3px;
-		background: $red;
-		border: none;
-	}
+    svg:hover {
+      fill: $red;
+      opacity: 1;
+    }
+  }
 }
 
 @media (max-width: 576px) {
-	#header {
-		font-size: 6px;
-	}
+  #header {
+    font-size: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #left-content {
+    height: 100%;
+    width: 100%;
+  }
+
+  #left-side {
+    width: 100%;
+    height: 80%;
+    padding: 0 15px;
+
+    #description-text p {
+      font-size: 12px;
+      margin: 75px 0;
+      width: 90%;
+    }
+  }
+
+  #right-side {
+    display: flex;
+    width: 100%;
+    height: 20%;
+
+    $svg-dim: 30px;
+
+    svg {
+      width: $svg-dim;
+      height: $svg-dim;
+    }
+
+    div {
+      display: flex;
+      width: 150px;
+    }
+
+    hr.right-bar {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: 768px) {
-	#header {
-		font-size: 12px;
-	}
+  #header {
+    font-size: 12px;
+  }
 
-	#header > #left-side {
-		padding-left: 10vw;
-	}
+  #header > #left-side {
+    padding-left: 10vw;
+  }
 
-	#right-side svg {
-		width: 50px;
-		height: 50px;
-	}
+  #right-side {
+    width: 20%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
 
-	#description-text p {
-		width: 85%;
-		font-size: 1.1em !important;
-	}
+    div {
+      height: 300px;
+      flex-direction: column;
+    }
 
-	#left-content {
-		padding-bottom: 50px;
-		height: calc(100% - 50px);
-	}
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
 
-	#bottomsvg {
-		width: 80%;
-	}
+  #description-text p {
+    width: 85%;
+    font-size: 1.1em;
+  }
+
+  #left-content {
+    padding-bottom: 50px;
+    height: 95%;
+  }
+
+  #left-side {
+    width: 80%;
+    height: calc(100% - 50px);
+
+    #description-text {
+      p {
+        margin: 75px 0;
+        font-size: 1em;
+      }
+    }
+  }
+
+  #bottomsvg {
+    width: 80%;
+  }
+
+  hr.right-bar {
+    height: calc(50% - 150px);
+    width: 3px;
+    background: $red;
+    border: none;
+  }
 }
 
 @media (min-width: 992px) {
-	#lang-slider {
-		margin-left: 12%;
-	}
+  #lang-slider {
+    margin-left: 12%;
+  }
 
-	#left-content {
-		padding-bottom: 0;
-	}
+  #left-content {
+    padding-bottom: 0;
+  }
 
-	#header {
-		font-size: 14px;
-	}
+  #header {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 1200px) {
-	#header {
-		font-size: 12px;
-	}
+  #header #left-side {
+    font-size: 16px;
+  }
 
-	#header > #left-side {
-		padding-left: 15vw;
-	}
+  #header > #left-side {
+    padding-left: 15vw;
+  }
 
-	#description-text p {
-		margin: 100px 0;
-		width: 55%;
-	}
+  #description-text p {
+    margin: 75px 0;
+    width: 65%;
+  }
 
-	#lang-slider {
-		margin-left: 25%;
-	}
+  #lang-slider {
+    margin-left: 25%;
+  }
 
-	#bottomsvg {
-		width: 80%;
-	}
+  #bottomsvg {
+	 width: 75%;
+  }
 }
 
 @media (min-width: 1500px) {
-	#header {
-		font-size: 16px;
-	}
+  #header {
+    font-size: 16px;
+  }
 
-	#right-side svg {
-		width: 60px;
-		height: 60px;
-	}
+  #right-side svg {
+    width: 60px;
+    height: 60px;
+  }
 
-	#description-text p {
-		margin: 100px 0;
-	}
+  #description-text p {
+    margin: 100px 0;
+  }
 
-	#lang-slider {
-		margin-left: 28%;
-	}
+  #lang-slider {
+    margin-left: 28%;
+  }
 }

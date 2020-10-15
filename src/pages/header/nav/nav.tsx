@@ -41,7 +41,7 @@ const Nav = () => {
         </div>
         <LanguageSlider />
       </div>
-      <FontAwesomeIcon id="nav-slider" icon={faBars} />
+      <FontAwesomeIcon id="nav-slider" icon={ faBars } />
     </nav>
   )
 }

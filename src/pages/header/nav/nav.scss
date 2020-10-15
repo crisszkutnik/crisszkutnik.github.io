@@ -64,6 +64,26 @@ nav {
   }
 }
 
+/*
+  Font-size
+*/
+
+@media (max-width: 576px) {
+  div#dropdown #dropdown-links {
+    font-size: 25px
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  div#dropdown #dropdown-links {
+    font-size: 40px
+  }
+}
+
+/*
+  Styles
+*/
+
 @media (max-width: 768px) {
   nav {
     justify-content: space-between;
@@ -89,11 +109,13 @@ nav {
       z-index: 3;
 
       #dropdown-links {
-        font-size: 40px;
         display: flex;
         flex-direction: column;
         height: 90%;
         justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
 
         $margin: 20px;
 
