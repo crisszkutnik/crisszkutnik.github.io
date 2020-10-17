@@ -1,6 +1,5 @@
 #header {
   width: 100%;
-  height: 100vh;
   background: $deep-blue;
   color: white;
   font-family: $poppins;
@@ -8,8 +7,10 @@
 
   #bottomsvg {
     position: absolute;
-    bottom: 0;
     pointer-events: none;
+    width: 100%;
+    transform: translateY((86px * 100vw)/1920px);
+    // Align the SVG correctly
   }
 
   #left-side {
@@ -92,12 +93,6 @@
       opacity: 1;
     }
   }
-
-  #bottomsvg {
-    width: 100%;
-    transform: translateY((86px * 100vw)/1920px);
-    // Align the SVG correctly
-  }
 }
 
 @media (max-width: 576px) {
@@ -107,7 +102,7 @@
   }
 
   #left-content {
-    height: 100%;
+    height: calc(100% - 75px);
     width: 100%;
   }
 

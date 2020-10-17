@@ -6,6 +6,25 @@ import Bottom from "./bottom/bottom"
 import Nav from "./nav/nav"
 
 export default function Header() {
+  /*
+    Better resize that is compatible with mobile devices
+  */
+
+  React.useEffect(() => {
+    window.addEventListener("resize", resizeHeader);
+    resizeHeader();
+  }, [])
+
+  const resizeHeader = () => {
+    document.getElementById("header")
+    .style.height = window.innerHeight + "px";
+
+    let bottomsvg:any = document.getElementById("bottomsvg");
+    let height = bottomsvg.getBoundingClientRect().height;
+
+    bottomsvg.style.top = window.innerHeight - height + "px";
+  }
+
   return (
     <div id="header">
       <div id="left-side">

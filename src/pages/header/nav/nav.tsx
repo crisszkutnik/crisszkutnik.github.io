@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Logo from "../../../assets/logo"
 import LanguageSlider from "./LanguageSlider"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -9,19 +9,12 @@ const Nav = () => {
 	const [displayNav, setNav] = useState(false);
 
 	const showNav = () => {
-		let dropdown = document.getElementById("dropdown");
-		let logo = document.getElementById("logo");
-		let body = document.getElementsByTagName("body")[0];
+		let nav = document.getElementsByTagName("nav")[0];
 
-		if(displayNav) {
-			dropdown.style.display = "none";
-			body.style.overflowY = "scroll"; // Enable scroll
-			logo.classList.remove("res-logo");
-		} else {
-			dropdown.style.display = "flex";
-			body.style.overflowY = "hidden"; // Disable scroll
-			logo.classList.add("res-logo");
-		}
+		if(displayNav)
+			nav.classList.remove("res-nav");
+		else
+			nav.classList.add("res-nav");
 
 		setNav(!displayNav);
 	}
