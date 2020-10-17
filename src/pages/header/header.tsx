@@ -19,7 +19,7 @@ export default function Header() {
     document.getElementById("header")
     .style.height = window.innerHeight + "px";
 
-    let bottomsvg:any = document.getElementById("bottomsvg");
+    let bottomsvg = document.getElementById("bottomsvg");
     let height = bottomsvg.getBoundingClientRect().height;
 
     bottomsvg.style.top = window.innerHeight - height + "px";
