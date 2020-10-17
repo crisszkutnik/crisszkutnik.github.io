@@ -55,13 +55,13 @@
       span {
         font-size: 1.5em;
         background: $red;
-		  padding: 10px 20px;
-		  display: inline-block;
-		}
-		
+        padding: 10px 20px;
+        display: inline-block;
+      }
+
       $translate: 10px;
-		$shadow-color: #0b0b14;
-		
+      $shadow-color: #0b0b14;
+
       span:hover {
         -webkit-box-shadow: -$translate $translate 0px 0px $shadow-color;
         -moz-box-shadow: -$translate $translate 0px 0px $shadow-color;
@@ -95,6 +95,12 @@
       fill: $red;
       opacity: 1;
     }
+  }
+
+  #bottomsvg {
+    width: 100%;
+    transform: translateY((86px * 100vw)/1920px);
+    // Align the SVG correctly
   }
 }
 
@@ -193,9 +199,9 @@
     }
   }
 
-  #bottomsvg {
-    width: 80%;
-  }
+  //#bottomsvg {
+  //  width: 80%;
+  //}
 
   hr.right-bar {
     height: calc(50% - 150px);
@@ -221,7 +227,7 @@
 
 @media (min-width: 1200px) {
   #header #left-side {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   #header > #left-side {
@@ -235,10 +241,6 @@
 
   #lang-slider {
     margin-left: 25%;
-  }
-
-  #bottomsvg {
-    width: 75%;
   }
 }
 
