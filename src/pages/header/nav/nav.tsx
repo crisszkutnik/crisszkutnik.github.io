@@ -9,15 +9,17 @@ const Nav = () => {
 	const [displayNav, setNav] = useState(false);
 
 	const showNav = () => {
-		console.log(displayNav);
 		let dropdown = document.getElementById("dropdown");
 		let logo = document.getElementById("logo");
+		let body = document.getElementsByTagName("body")[0];
 
 		if(displayNav) {
 			dropdown.style.display = "none";
+			body.style.overflowY = "scroll"; // Enable scroll
 			logo.classList.remove("res-logo");
 		} else {
 			dropdown.style.display = "flex";
+			body.style.overflowY = "hidden"; // Disable scroll
 			logo.classList.add("res-logo");
 		}
 

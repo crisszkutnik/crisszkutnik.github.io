@@ -93,7 +93,7 @@ nav {
     }
 
     div#dropdown {
-      position: absolute;
+      position: fixed;
       display: none;
       flex-direction: column;
       width: 100%;
