@@ -26,7 +26,7 @@ export default function Header() {
             </p>
           </div>
           <div id="header-button">
-            <a href="#skills"><span>Know me</span></a>
+            <span onClick={ () => window.scrollTo(0, window.innerHeight) }>Know me</span>
           </div>
         </div>
       </div>

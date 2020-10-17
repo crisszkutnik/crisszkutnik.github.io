@@ -57,6 +57,7 @@
         background: $red;
         padding: 10px 20px;
         display: inline-block;
+        cursor: pointer;
       }
 
       $translate: 10px;
@@ -67,11 +68,6 @@
         -moz-box-shadow: -$translate $translate 0px 0px $shadow-color;
         box-shadow: -$translate $translate 0px 0px $shadow-color;
         transform: translateX($translate);
-      }
-
-      a {
-        color: white;
-        text-decoration: none;
       }
     }
   }

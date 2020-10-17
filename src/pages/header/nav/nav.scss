@@ -89,10 +89,7 @@ nav {
     justify-content: space-between;
 
     .res-logo {
-      position: absolute;
-      top: 50px;
-      left: calc(50% - 20px); // Subtract half logo size
-      z-index: 4;
+      margin-left: calc(50% - 20px); // Half minus half of the width
     }
 
     div#dropdown {
@@ -100,7 +97,7 @@ nav {
       display: none;
       flex-direction: column;
       width: 100%;
-      height: 100vh;
+      height: calc(100% - 50px); // Subtract top-responsive height
       justify-content: center;
       align-items: center;
       background: $deep-blue;
@@ -111,7 +108,7 @@ nav {
       #dropdown-links {
         display: flex;
         flex-direction: column;
-        height: 90%;
+        height: 100%;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -129,23 +126,21 @@ nav {
       }
     }
 
+    #top-responsive {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     #lang-slider {
       display: flex;
       font-size: 25px;
     }
 
-    #nav-slider, #close {
+    #nav-slider {
       font-size: 20px;
-    }
-
-    #close {
-      position: absolute;
-      right: 50px;
-      top: 50px;
-    }
-
-    #close:hover {
-      color: $red;
     }
   }
 }
@@ -159,6 +154,12 @@ nav {
 
     #logo {
       margin-right: 50px;
+    }
+
+    #top-responsive {
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
 
     #nav-slider, #close {
