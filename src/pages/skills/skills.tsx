@@ -1,5 +1,6 @@
 import React from "react"
 import Polygons from "./polygons/polygons"
+import Wave from "./wave"
 import "./skills.scss"
 
 const Skills = () => {
@@ -42,6 +43,7 @@ const Skills = () => {
 				</ul>
 		  </div>
       </div>
+      <Wave />
     </div>
   )
 }

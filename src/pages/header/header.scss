@@ -9,7 +9,8 @@
     position: absolute;
     pointer-events: none;
     width: 100%;
-    transform: translateY((86px * 100vw)/1920px);
+    transform: translateY((87px * 100vw)/1920px);
+    z-index: 2;
     // Align the SVG correctly
   }
 

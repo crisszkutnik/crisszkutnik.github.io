@@ -1,10 +1,12 @@
 #skills {
-  padding: 125px 0;
+  padding-top: 125px;
+  padding-bottom: calc(((100% * 114) / 1920) + 125px);
   box-sizing: content-box;
   width: 100%;
   background: $light-blue;
   display: flex;
   font-family: $poppins;
+  position: relative;
 
   .skills-container {
     display: flex;
