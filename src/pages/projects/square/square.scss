@@ -1,8 +1,8 @@
 $black-bg: rgba(0,0,0, 0.75);
 
 .project-square {
-	width: 25%;
-	height: 250px;
+	width: 500px;
+	height: 280px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -27,7 +27,45 @@ $black-bg: rgba(0,0,0, 0.75);
 		transform: scale(0);
 		opacity: 0;
 		transition: all 0.25s ease-in-out;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
 		background: $black-bg;
+		padding: 10px;
+
+		div {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		span {
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+
+		.square-btn {
+			width: 125px;
+		}
+
+		.square-gh > svg {
+			$size: 50px;
+			
+			width: $size;
+			height: $size;
+		}
+
+		svg {
+			fill: white;
+			transition: all 0.25s ease-in-out;
+			cursor: pointer;
+		}
+
+		svg:hover {
+			transform: scale(1.1);
+			fill: $red;
+		}
 	}
 }
 
