@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "./header/header";
 import Skills from "./skills/skills";
-import { Helmet } from "react-helmet"
+import Projects from "./projects/projects"
+import { Helmet } from "react-helmet";
 import "./styles.scss";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       </Helmet>
       <Header />
       <Skills />
+      <Projects />
     </div>
   );
 }

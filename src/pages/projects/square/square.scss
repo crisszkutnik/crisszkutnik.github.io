@@ -1,0 +1,38 @@
+.project-square {
+	width: 25%;
+	height: 250px;
+	background: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: $poppins;
+}
+
+$black-bg: rgba(0,0,0, 0.75);
+
+.square-container {
+	width: 65%;
+	height: 30%;
+	background: $black-bg;
+	display: flex;
+	color: white;
+	transition: all 0.25s ease-in-out;
+	justify-content: center;
+	align-items: center;
+
+	.square-title {
+		h1 {
+			opacity: 1;
+			transition: all 0.25s ease-in-out;
+		}
+	}
+}
+
+.project-square:hover .square-container {
+	.square-title h1 {
+		opacity: 0;
+	}
+
+	width: 100%;
+	height: 100%;
+}
