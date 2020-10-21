@@ -1,5 +1,8 @@
 #projects {
-	padding: 150px 0;
+	$padding-top: 75px;
+
+	padding-bottom: 150px;
+	padding-top: $padding-top;
 	width: 100%;
 	background: $deep-blue;
 	box-sizing: content-box;
@@ -7,4 +10,50 @@
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+
+	#projects-title {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 150px - $padding-top; // Subtract #projects padding-top
+		color: white;
+		font-family: $poppins;
+
+		h1 {
+			font-weight: 600;
+		}
+
+		hr {
+			margin-top: 5px;
+			height: 3px;
+			border: none;
+			background: white;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	#projects-title {
+		h1 {
+			font-size: 10vw;
+		}
+
+		hr {
+			width: 50vw;
+		}
+	}
+}
+
+@media (min-width: 769px) {
+	#projects-title {
+		h1 {
+			font-size: 5vh;
+		}
+
+		hr {
+			width: 10vw;
+		}
+	}
 }
