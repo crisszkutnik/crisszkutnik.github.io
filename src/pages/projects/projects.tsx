@@ -20,6 +20,7 @@ export default function () {
 		  link="https://fmc-weekly.cubing.net"
       />
       <Square title="Sorting Visualizer" />
+      <Square />
     </div>
   )
 }

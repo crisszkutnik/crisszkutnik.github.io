@@ -46,11 +46,11 @@ $black-bg: rgba(0,0,0, 0.75);
 		}
 
 		.square-btn {
-			width: 125px;
+			width: 10em;
 		}
 
 		.square-gh > svg {
-			$size: 50px;
+			$size: 4em;
 			
 			width: $size;
 			height: $size;
@@ -81,7 +81,19 @@ $black-bg: rgba(0,0,0, 0.75);
 	}
 }
 
+@media (max-width: 767px) {
+	.project-square {
+		font-size: 3vw;
+		max-width: 500px;
+		max-height: 280px;
+		width: 95vw;
+		height: 60vw;
+		margin-bottom: 20vw;
+	}
+}
 
-
-
-	
+@media (min-width: 768px) {
+	.project-square {
+		margin: 40px 50px;
+	}
+}
