@@ -7,7 +7,7 @@ const Footer = () => {
 	return (
 		<div id="footer">
 			<div className="footer-size" id="footer-content">
-				<p>Code avaiable on <a target="_blank" href="https://github.com/crisszkutnik/portfolio2">GitHub</a></p>
+				<p>Code avaiable on <a target="_blank" href="https://github.com/crisszkutnik/crisszkutnik.github.io">GitHub</a></p>
 				<div id="links">
 					<hr />
 						<div id="logos">
