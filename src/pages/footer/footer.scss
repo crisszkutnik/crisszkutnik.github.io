@@ -1,0 +1,104 @@
+#footer {
+  $footer-height: 180px;
+
+  height: $footer-height;
+  width: 100%;
+  position: relative;
+  color: white;
+  font-family: $poppins;
+
+  .footer-size {
+    width: 100%;
+    height: $footer-height;
+  }
+
+  a {
+	  color: $deep-blue;
+	  text-decoration: none;
+	  cursor: pointer;
+  }
+
+  a:hover {
+	  text-decoration: underline;
+  }
+
+  #footer-block {
+    position: relative;
+    z-index: -2;
+  }
+
+  #footer-content {
+    position: fixed;
+    bottom: 0;
+    z-index: 0;
+	 background: $red;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+
+	 p {
+		 width: 100%;
+		 text-align: center;
+	 }
+  }
+
+  #links {
+	$margin: 10px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 15px 0;
+	
+	hr {
+		height: 3px;
+		border: none;
+		background: white;
+		width: calc(48% - 50px - 2 * 10px);
+	}
+
+    #logos {
+		display: flex;
+		
+      .footer-logo {
+        width: 50px;
+		  height: 50px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  margin-left: $margin;
+		  margin-right: $margin;
+		  border-radius: 5px;
+		  transition: all 0.25s ease-in-out;
+		  cursor: pointer;
+
+			a {
+				width: 80%;
+				height: 80%;
+			}
+
+        svg {
+          width: 100%;
+			 height: 100%;
+			 fill: white;
+        }
+		}
+
+		.footer-logo:hover {
+			background: $deep-blue;
+			transform: scale(1.05);
+		}
+    }
+  }
+}
+
+@media (max-width: 768px) {
+	#footer-content p {
+		font-size: 3.5vw;
+	}
+}
+
+@media (min-width: 769px) {
+	#footer-content p {
+		font-size: 2vh;
+	}
+}

@@ -4,6 +4,8 @@
   color: white;
   font-family: $poppins;
   display: flex;
+  position: relative;
+  z-index: 4;
 
   #bottomsvg {
     position: absolute;

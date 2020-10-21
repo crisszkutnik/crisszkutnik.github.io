@@ -10,6 +10,8 @@
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	position: relative;
+	z-index: 4;
 
 	#projects-title {
 		width: 100%;
