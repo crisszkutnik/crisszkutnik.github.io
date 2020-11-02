@@ -1,0 +1,67 @@
+#about {
+  padding-top: 125px;
+  padding-bottom: calc(((100% * 114) / 1920) + 125px);
+  box-sizing: content-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: $deep-blue;
+  font-family: $poppins;
+  position: relative;
+  z-index: 4;
+
+  h1 {
+    background: linear-gradient(144.8deg, #e94560 52.24%, #ff6b00 163.43%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5vw;
+    margin-bottom: 50px;
+  }
+
+  #about-img {
+    $perc: 350px;
+    position: relative;
+    width: $perc;
+    height: $perc + 50px;
+
+    #img-bg {
+      background: url("../../assets/me.jpg");
+      background-size: cover;
+      width: $perc;
+      height: $perc + 50px;
+      position: relative;
+      z-index: 3;
+
+      #about-gradient {
+        transition: all 0.25s ease-in-out;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(137.84deg, rgba(233, 69, 96, 0.5) 11.59%, rgba(255, 107, 0, 0.5) 125.66%);
+      }
+    }
+
+    #img-outline {
+      width: $perc;
+      height: $perc + 50px;
+      position: absolute;
+      border: 10px solid transparent;
+      border-image-source: linear-gradient(142.54deg, #e94560 50.85%, #ff6b00 140.53%);
+      border-image-slice: 5;
+      transform: translate(45px, 45px);
+      top: 0;
+      z-index: 0;
+      transition: all 0.25s ease-in-out;
+    }
+  }
+
+  #about-img:hover {
+    #img-bg #about-gradient {
+      opacity: 0.1;
+    }
+
+    #img-outline {
+      transform: translate(25px, 25px);
+    }
+  }
+}

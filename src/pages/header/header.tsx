@@ -3,14 +3,13 @@ import "./header.scss";
 import GH_LOGO from "../../assets/github";
 import Mail from "../../assets/mail";
 import Bottom from "./bottom/bottom"
-import Nav from "./nav/nav"
 
 export default function Header() {
   /*
     Better resize that is compatible with mobile devices
   */
 
-  React.useEffect(() => {
+  /*React.useEffect(() => {
     window.addEventListener("resize", resizeHeader);
     resizeHeader();
   }, [])
@@ -23,12 +22,11 @@ export default function Header() {
     let height = bottomsvg.getBoundingClientRect().height;
 
     bottomsvg.style.top = window.innerHeight - height + "px";
-  }
+  }*/
 
   return (
     <div id="header">
       <div id="left-side">
-        <Nav />
         <div id="left-content">
           <div id="name-text">
             <p>Hello, I am</p>
@@ -49,19 +47,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div id="right-side">
-        <hr className="right-bar" />
-        <div>
-          <a href="https://github.com/crisszkutnik" target="_blank">
-            <GH_LOGO />
-          </a>
-          <a href="mailto:crisszkutnik@gmail.com" target="_blank">
-            <Mail />
-          </a>
-        </div>
-        <hr className="right-bar" />
-      </div>
-      <Bottom />
     </div>
   )
 }

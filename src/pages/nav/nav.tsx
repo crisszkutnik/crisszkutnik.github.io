@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import Logo from "../../../assets/logo"
+import Logo from "../../assets/logo"
 import LanguageSlider from "./LanguageSlider"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"

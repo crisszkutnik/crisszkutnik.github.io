@@ -1,20 +1,13 @@
 #header {
   width: 100%;
   background: $deep-blue;
+  padding-top: 50px; // nav height
   color: white;
   font-family: $poppins;
   display: flex;
   position: relative;
   z-index: 4;
-
-  #bottomsvg {
-    position: absolute;
-    pointer-events: none;
-    width: 100%;
-    transform: translateY((87px * 100vw)/1920px);
-    z-index: 2;
-    // Align the SVG correctly
-  }
+  height: 100vh;
 
   #left-side {
     display: flex;
@@ -76,27 +69,6 @@
       }
     }
   }
-
-  #right-side {
-    display: flex;
-    justify-content: center;
-
-    div {
-      display: flex;
-      justify-content: space-around;
-    }
-
-    svg {
-      fill: white;
-      opacity: 0.5;
-      transition: all 0.25s ease-in-out;
-    }
-
-    svg:hover {
-      fill: $red;
-      opacity: 1;
-    }
-  }
 }
 
 @media (max-width: 576px) {
@@ -122,28 +94,6 @@
       width: 90%;
     }
   }
-
-  #right-side {
-    display: flex;
-    width: 100%;
-    height: 20%;
-
-    $svg-dim: 30px;
-
-    svg {
-      width: $svg-dim;
-      height: $svg-dim;
-    }
-
-    div {
-      display: flex;
-      width: 150px;
-    }
-
-    hr.right-bar {
-      display: none;
-    }
-  }
 }
 
 @media (min-width: 768px) {
@@ -153,23 +103,6 @@
 
   #header > #left-side {
     padding-left: 10vw;
-  }
-
-  #right-side {
-    width: 20%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-
-    div {
-      height: 300px;
-      flex-direction: column;
-    }
-
-    svg {
-      width: 50px;
-      height: 50px;
-    }
   }
 
   #description-text p {
@@ -193,24 +126,9 @@
       }
     }
   }
-
-  //#bottomsvg {
-  //  width: 80%;
-  //}
-
-  hr.right-bar {
-    height: calc(50% - 150px);
-    width: 3px;
-    background: $red;
-    border: none;
-  }
 }
 
 @media (min-width: 992px) {
-  #lang-slider {
-    margin-left: 12%;
-  }
-
   #left-content {
     padding-bottom: 0;
   }
@@ -233,10 +151,6 @@
     margin: 75px 0;
     width: 65%;
   }
-
-  #lang-slider {
-    margin-left: 25%;
-  }
 }
 
 @media (min-width: 1500px) {
@@ -244,16 +158,7 @@
     font-size: 16px;
   }
 
-  #right-side svg {
-    width: 60px;
-    height: 60px;
-  }
-
   #description-text p {
     margin: 100px 0;
-  }
-
-  #lang-slider {
-    margin-left: 28%;
   }
 }

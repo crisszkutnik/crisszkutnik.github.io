@@ -4,6 +4,10 @@ nav {
   display: flex;
   align-items: center;
   font-size: 1em;
+  background: $deep-blue;
+  font-family: $poppins;
+  color: white;
+  padding: 0 5vw;
 
   #logo {
     width: 40px;
@@ -55,11 +59,11 @@ nav {
       }
 
       .uk-flag {
-        background-image: url("../../../assets/uk-flag.svg");
+        background-image: url("../../assets/uk-flag.svg");
       }
 
       .spain-flag {
-        background-image: url("../../../assets/spain-flag.png");
+        background-image: url("../../assets/spain-flag.png");
       }
     }
   }
@@ -225,9 +229,16 @@ nav {
 
 @media (min-width: 769px) {
   nav {
+    position: relative;
+
     div#dropdown {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
+    }
+
+    #lang-slider {
+      margin-left: 100px;
     }
 
     #logo {
