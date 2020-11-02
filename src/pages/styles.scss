@@ -58,6 +58,29 @@ $poppins: 'Poppins', sans-serif;
 				border: none;
 				background: $colour;
 			}
+
+			#sidebar-dots {
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				.dot-sidebar {
+					width: 10px;
+					height: 10px;
+					border: 2px solid white;
+					border-radius: 50%;
+					margin-bottom: 15px;
+					cursor: pointer;
+					transition: all 0.25s ease-in-out;
+				}
+
+				.dot-sidebar.selected {
+					background: white;
+				}
+			}
 		}
 	}
 }

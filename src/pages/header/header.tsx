@@ -31,7 +31,7 @@ export default function Header() {
           <div id="name-text">
             <p>Hello, I am</p>
             <h1>CRISTOBAL SZKUTNIK</h1>
-            <h2>Full stack developer</h2>
+            <h2>Systems enginnering student</h2>
           </div>
           <div id="description-text">
             <p>
