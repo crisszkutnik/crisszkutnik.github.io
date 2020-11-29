@@ -14,6 +14,7 @@ interface IState {
   selected:number,
   headerHeight:number,
   aboutHeight:number,
+  footerHeight:number
 }
 
 class Home extends React.Component<IProps, IState> {
@@ -23,22 +24,44 @@ class Home extends React.Component<IProps, IState> {
       selected: 0,
       headerHeight: 0,
       aboutHeight: 0,
+      footerHeight: 0,
     }
     this.dotFill = this.dotFill.bind(this);
     this.itemHeight = this.itemHeight.bind(this);
+    this.sidebarControl = this.sidebarControl.bind(this);
   }
 
   componentDidMount() {
     this.itemHeight();
     document.addEventListener("scroll", this.dotFill);
+    document.addEventListener("scroll", this.sidebarControl);
     window.addEventListener("resize", this.itemHeight);
   }
 
   itemHeight() {
     this.setState({
       headerHeight: document.getElementById("header").offsetHeight,
-      aboutHeight: document.getElementById("about").offsetHeight
+      aboutHeight: document.getElementById("about").offsetHeight,
+      footerHeight: document.getElementById("footer").offsetHeight
     })
+  }
+
+  sidebarControl() {
+    const setBottom = (n) => {
+      elems[0].style.bottom = n + "px";
+      elems[1].style.bottom = n + "px";
+    }
+
+    let scroll = window.pageYOffset;
+    let docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
+    let elems = document.getElementsByClassName("sidebar-content") as HTMLCollectionOf<HTMLElement>;
+    let n1 = scroll + window.innerHeight;
+    let n2 = docHeight - this.state.footerHeight;
+
+    if(n1 < n2)
+      setBottom(0);
+    else 
+      setBottom(n1 - n2);
   }
 
   dotFill() {
