@@ -13,7 +13,7 @@ interface IProps {}
 interface IState {
   selected:number,
   headerHeight:number,
-  aboutHeight:number
+  aboutHeight:number,
 }
 
 class Home extends React.Component<IProps, IState> {
@@ -22,7 +22,7 @@ class Home extends React.Component<IProps, IState> {
     this.state = {
       selected: 0,
       headerHeight: 0,
-      aboutHeight: 0
+      aboutHeight: 0,
     }
     this.dotFill = this.dotFill.bind(this);
     this.itemHeight = this.itemHeight.bind(this);
