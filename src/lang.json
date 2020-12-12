@@ -1,0 +1,14 @@
+{
+    "en": {
+        "header_top": "Hello, I am",
+        "header_degree": "Systems engineering student",
+        "header_text": "Hi! I am a 19 year old systems engineering student and full stack developer from Buenos Aires, Argentina. I am most into JavaScript and JS based frameworks like ReactJS, TypeScript and NodeJS. Currently not employed but working on several projects. Keep scrolling to know more about me!",
+        "header_btn": "Know me",
+        "about_title": "About me",
+        "about_text": "Hello! I am Cristobal, a software developer and systems engineering student from Buenos Aires, Argentina. I started my degree back in 2019 at the National Technological University (UTN) and I am planning to be finishing it by 2023. Since I started studying I also self-taught myself different technologies related to web development and NoSQL databases, like NodeJS, MongoDB, and ReactJS. Some of the tools I have experience with are:",
+        "foote_-text":  "Code avaiable on"
+    },
+    "es": {
+        "header_top": "Hola, soy"
+    }
+}

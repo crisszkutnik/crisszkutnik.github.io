@@ -1,9 +1,10 @@
 import React, { useState } from "react"
 
-export default function LanguageSlider() {
+export default function LanguageSlider(props) {
 	const [eng, setLang] = useState(true);
 
 	let changeBG = () => {
+		props.changeLang();
 		let e = document.getElementById("dot");
 		let container = document.getElementById("dot-container");
 		

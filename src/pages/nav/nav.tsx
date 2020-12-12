@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import "./nav.scss"
 
-const Nav = () => {
+const Nav = (props) => {
 	const [displayNav, setNav] = useState(false);
 
 	const showNav = () => {
@@ -32,7 +32,7 @@ const Nav = () => {
           <a href="#">Projects</a>
           <a href="#">Contact</a>
         </div>
-        <LanguageSlider />
+        <LanguageSlider changeLang={props.changeLang} />
       </div>
     </nav>
   )

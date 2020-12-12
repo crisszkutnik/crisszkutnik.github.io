@@ -3,12 +3,12 @@ import "./header.scss";
 import GH_LOGO from "../../assets/github";
 import Mail from "../../assets/mail";
 import Bottom from "./bottom/bottom"
+import LangContext from "../../LangContext"
 
 export default function Header() {
   /*
     Better resize that is compatible with mobile devices
   */
-
   /*React.useEffect(() => {
     window.addEventListener("resize", resizeHeader);
     resizeHeader();
@@ -29,7 +29,11 @@ export default function Header() {
       <div id="left-side">
         <div id="left-content">
           <div id="name-text">
-            <p>Hello, I am</p>
+            <p>
+              <LangContext.Consumer>
+                {(text) => text.header_top}
+              </LangContext.Consumer>
+             </p>
             <h1>CRISTOBAL SZKUTNIK</h1>
             <h2>Systems enginnering student</h2>
           </div>
