@@ -5,11 +5,30 @@
         "header_text": "Hi! I am a 19 year old systems engineering student and full stack developer from Buenos Aires, Argentina. I am most into JavaScript and JS based frameworks like ReactJS, TypeScript and NodeJS. Currently not employed but working on several projects. Keep scrolling to know more about me!",
         "header_btn": "Know me",
         "about_title": "About me",
-        "about_text": "Hello! I am Cristobal, a software developer and systems engineering student from Buenos Aires, Argentina. I started my degree back in 2019 at the National Technological University (UTN) and I am planning to be finishing it by 2023. Since I started studying I also self-taught myself different technologies related to web development and NoSQL databases, like NodeJS, MongoDB, and ReactJS. Some of the tools I have experience with are:",
-        "foote_-text":  "Code avaiable on"
+        "about_text_1": "Hello! I am Cristobal, a software developer and systems engineering student from Buenos Aires, Argentina.",
+        "about_text_2": "I started my degree back in 2019 at the National Technological University (UTN) and I am planning to be finishing it by 2023. Since I started studying I also self-taught myself different technologies related to web development and NoSQL databases, like NodeJS, MongoDB, and ReactJS.",
+        "about_text_3": "Some of the tools I have experience with are:",
+        "footer_text":  "Code avaiable on",
+        "project_title": "MY PROJECTS",
+        "nav_text_1": "Home",
+        "nav_text_2": "About me",
+        "nav_text_3": "Projects",
+        "nav_text_4": "Contact"
     },
     "es": {
         "header_top": "Hola, soy",
-        "header_degree": "Estudiante de ingenieria en sistemas"
+        "header_degree": "Estudiante de ingenieria en sistemas",
+        "header_text": "¡Hola! Soy un estudiante de ingeniería en sistemas de información y desarrollador full stack de Buenos Aires, Argentina. Me especializo principalmente en JavaScript y frameworks basados en este, como ReactJS, TypeScript y NodeJS. Actualmente no tengo empleo, pero trabajo en diferentes proyectos. ¡Seguí bajando para saber más sobre mí!",
+        "header_btn": "Conoce mas",
+        "about_title": "Sobre mi",
+        "about_text_1": "",
+        "about_text_2": "Comencé mi carrera de ingeniería en sistemas de información en 2019 en la Universidad Tecnológica Nacional, proyectando recibirme en el 2023. Un poco antes de que comencé la carrera, y a lo largo de esta, aprendí por mi cuenta diferentes tecnologías relacionadas al desarrollo web y bases de datos NoSQL, como MongoDB, ReactJS, NodeJS, entre otros. ",
+        "about_text_3": "Algunas de las cosas con las que tengo experiencia son:",
+        "footer_text": "Codigo disponible en",
+        "project_title": "MIS PROYECTOS",
+        "nav_text_1": "Inicio",
+        "nav_text_2": "Sobre mi",
+        "nav_text_3": "Proyectos",
+        "nav_text_4": "Contacto"
     }
 }

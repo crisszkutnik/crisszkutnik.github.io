@@ -1,7 +1,8 @@
-import React from "react"
-import Square from "./square/square"
-import BG1 from "../../assets/img1.png"
-import "./projects.scss"
+import React from "react";
+import Square from "./square/square";
+import BG1 from "../../assets/img1.png";
+import "./projects.scss";
+import LangContext from "../../LangContext";
 
 let text1 = `Fewest Moves is a website developed for people who want to practice
           the FMC event. It hosts a weekly competition where 3 scrambles are
@@ -16,7 +17,15 @@ export default function () {
   return (
     <div id="projects">
       <div id="projects-title">
-        <h1>MY PROJECTS</h1>
+        <LangContext.Consumer>
+          {(text) => {
+            if (text)
+              return (<h1>{text.project_title}</h1>);
+            else
+              return (<></>);
+          }
+          }
+        </LangContext.Consumer>
         <hr />
       </div>
       <Square

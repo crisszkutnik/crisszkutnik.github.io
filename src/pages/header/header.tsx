@@ -26,29 +26,28 @@ export default function Header() {
       <div id="left-side">
         <LangContext.Consumer>
           {(text) => {
-            return (
-              <div id="left-content">
-                <div id="name-text">
-                  <p>
-                    {text.header_top}
+            if(text)
+              return (
+                <div id="left-content">
+                  <div id="name-text">
+                    <p>
+                      {text.header_top}
+                    </p>
+                    <h1>CRISTOBAL SZKUTNIK</h1>
+                    <h2>{text.header_degree}</h2>
+                  </div>
+                  <div id="description-text">
+                    <p>
+                    {text.header_text}
                   </p>
-                  <h1>CRISTOBAL SZKUTNIK</h1>
-                  <h2>{text.header_degree}</h2>
+                  </div>
+                  <div id="header-button">
+                    <span onClick={() => window.scrollTo(0, window.innerHeight)}>{text.header_btn}</span>
+                  </div>
                 </div>
-                <div id="description-text">
-                  <p>
-                    Hi! I am a 19 year old systems engineering student and full stack
-                    developer from Buenos Aires, Argentina. I am most into JavaScript
-                    and JS based frameworks like ReactJS, TypeScript and NodeJS.
-                    Currently not employed but working on several projects. Keep
-                    scrolling to know more about me!
-                </p>
-                </div>
-                <div id="header-button">
-                  <span onClick={() => window.scrollTo(0, window.innerHeight)}>Know me</span>
-                </div>
-              </div>
-            );
+              );
+            else
+              return (<></>);
           }}
         </LangContext.Consumer>
       </div>
