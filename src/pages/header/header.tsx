@@ -1,9 +1,6 @@
 import React from "react";
 import "./header.scss";
-import GH_LOGO from "../../assets/github";
-import Mail from "../../assets/mail";
-import Bottom from "./bottom/bottom"
-import LangContext from "../../LangContext"
+import LangContext from "../../LangContext";
 
 export default function Header() {
   /*
@@ -27,29 +24,33 @@ export default function Header() {
   return (
     <div id="header">
       <div id="left-side">
-        <div id="left-content">
-          <div id="name-text">
-            <p>
-              <LangContext.Consumer>
-                {(text) => text.header_top}
-              </LangContext.Consumer>
-             </p>
-            <h1>CRISTOBAL SZKUTNIK</h1>
-            <h2>Systems enginnering student</h2>
-          </div>
-          <div id="description-text">
-            <p>
-              Hi! I am a 19 year old systems engineering student and full stack
-              developer from Buenos Aires, Argentina. I am most into JavaScript
-              and JS based frameworks like ReactJS, TypeScript and NodeJS.
-              Currently not employed but working on several projects. Keep
-              scrolling to know more about me!
-            </p>
-          </div>
-          <div id="header-button">
-            <span onClick={ () => window.scrollTo(0, window.innerHeight) }>Know me</span>
-          </div>
-        </div>
+        <LangContext.Consumer>
+          {(text) => {
+            return (
+              <div id="left-content">
+                <div id="name-text">
+                  <p>
+                    {text.header_top}
+                  </p>
+                  <h1>CRISTOBAL SZKUTNIK</h1>
+                  <h2>{text.header_degree}</h2>
+                </div>
+                <div id="description-text">
+                  <p>
+                    Hi! I am a 19 year old systems engineering student and full stack
+                    developer from Buenos Aires, Argentina. I am most into JavaScript
+                    and JS based frameworks like ReactJS, TypeScript and NodeJS.
+                    Currently not employed but working on several projects. Keep
+                    scrolling to know more about me!
+                </p>
+                </div>
+                <div id="header-button">
+                  <span onClick={() => window.scrollTo(0, window.innerHeight)}>Know me</span>
+                </div>
+              </div>
+            );
+          }}
+        </LangContext.Consumer>
       </div>
     </div>
   )

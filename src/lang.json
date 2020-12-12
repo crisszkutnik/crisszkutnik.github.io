@@ -9,6 +9,7 @@
         "foote_-text":  "Code avaiable on"
     },
     "es": {
-        "header_top": "Hola, soy"
+        "header_top": "Hola, soy",
+        "header_degree": "Estudiante de ingenieria en sistemas"
     }
 }
