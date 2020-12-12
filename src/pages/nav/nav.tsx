@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import "./nav.scss"
 import LangContext from "../../LangContext"
+import { scrollTo } from "../../helpers/funcHelpers"
 
 const Nav = (props) => {
   const [displayNav, setNav] = useState(false);
@@ -32,10 +33,10 @@ const Nav = (props) => {
             if (text)
               return (
                 <div id="dropdown-links">
-                  <a href="#">{text.nav_text_1}</a>
-                  <a href="#">{text.nav_text_2}</a>
-                  <a href="#">{text.nav_text_3}</a>
-                  <a href="#">{text.nav_text_4}</a>
+                  <a onClick={ () => scrollTo("#header") }>{text.nav_text_1}</a>
+                  <a onClick={ () => scrollTo("#about") }>{text.nav_text_2}</a>
+                  <a onClick={ () => scrollTo("#projects") }>{text.nav_text_3}</a>
+                  <a onClick={ () => window.scrollTo(0, document.body.offsetHeight) }>{text.nav_text_4}</a>
                 </div>
               );
             else

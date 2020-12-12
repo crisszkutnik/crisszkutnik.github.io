@@ -26,7 +26,9 @@ nav {
 
     a:hover {
       color: $red;
+      cursor: pointer;
     }
+
 
     #lang-slider {
       display: flex;
@@ -119,7 +121,7 @@ nav {
     #top-responsive {
       height: 75px;
       display: flex;
-      padding-right: 37.5px;
+      padding-right: 2.5vw;
       padding-left: calc(50% - 20px); // 50% - half logo size
     }
 
@@ -135,7 +137,7 @@ nav {
 
       #dropdown-links {
         width: 100%;
-        height: 90%;
+        height: 85%;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -153,7 +155,7 @@ nav {
       }
 
       #lang-slider {
-        height: 10%;
+        height: 15%;
       }
     }
   }

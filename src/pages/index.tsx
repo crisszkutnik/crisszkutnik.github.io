@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet";
 import "./styles.scss";
 import Langs from "../lang.json"
 import LangContext from "../LangContext"
+import { scrollTo } from "../helpers/funcHelpers"
 
 interface IProps { }
 interface IState {
@@ -93,12 +94,7 @@ class Home extends React.Component<IProps, IState> {
       this.setState({ selected: newIndex });
     }
   }
-
-  scrollTo(css_selector: string) {
-    let elem: HTMLElement = document.querySelector(css_selector);
-    window.scrollTo(0, elem.offsetTop + 1);
-  }
-
+  
   render() {
     return (
       <LangContext.Provider value={this.state.lang === "en" ? Langs.en : Langs.es}>
@@ -112,9 +108,9 @@ class Home extends React.Component<IProps, IState> {
             <div className="sidebar">
               <div className="sidebar-content">
                 <div id="sidebar-dots">
-                  <div onClick={() => this.scrollTo("#header")} className="dot-sidebar selected"></div>
-                  <div onClick={() => this.scrollTo("#about")} className="dot-sidebar"></div>
-                  <div onClick={() => this.scrollTo("#projects")} className="dot-sidebar"></div>
+                  <div onClick={() => scrollTo("#header")} className="dot-sidebar selected"></div>
+                  <div onClick={() => scrollTo("#about")} className="dot-sidebar"></div>
+                  <div onClick={() => scrollTo("#projects")} className="dot-sidebar"></div>
                 </div>
               </div>
             </div>

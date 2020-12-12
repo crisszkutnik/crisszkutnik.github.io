@@ -12,7 +12,7 @@ export default function () {
           return (
             <div id="projects">
               <div id="projects-title">
-                <h1>{text.project_title}</h1>)
+                <h1>{text.project_title}</h1>
               <hr />
               </div>
               <Square
