@@ -8,9 +8,10 @@ import GitHub from "../assets/github";
 import Mail from "../assets/mail";
 import { Helmet } from "react-helmet";
 import "./styles.scss";
-import Langs from "../lang.json"
-import LangContext from "../LangContext"
-import { scrollTo } from "../helpers/funcHelpers"
+import Langs from "../lang.json";
+import LangContext from "../LangContext";
+import { scrollTo } from "../helpers/funcHelpers";
+import Fade from "react-reveal/Fade";
 
 interface IProps { }
 interface IState {
@@ -52,9 +53,9 @@ class Home extends React.Component<IProps, IState> {
     })
   }
 
-  changeLang() { 
+  changeLang() {
     let lang = this.state.lang === "en" ? "es" : "en";
-    this.setState({lang});
+    this.setState({ lang });
   }
 
   sidebarControl() {
@@ -94,7 +95,7 @@ class Home extends React.Component<IProps, IState> {
       this.setState({ selected: newIndex });
     }
   }
-  
+
   render() {
     return (
       <LangContext.Provider value={this.state.lang === "en" ? Langs.en : Langs.es}>
@@ -107,11 +108,13 @@ class Home extends React.Component<IProps, IState> {
           <div id="page-content">
             <div className="sidebar">
               <div className="sidebar-content">
-                <div id="sidebar-dots">
-                  <div onClick={() => scrollTo("#header")} className="dot-sidebar selected"></div>
-                  <div onClick={() => scrollTo("#about")} className="dot-sidebar"></div>
-                  <div onClick={() => scrollTo("#projects")} className="dot-sidebar"></div>
-                </div>
+                <Fade left>
+                  <div id="sidebar-dots">
+                    <div onClick={() => scrollTo("#header")} className="dot-sidebar selected"></div>
+                    <div onClick={() => scrollTo("#about")} className="dot-sidebar"></div>
+                    <div onClick={() => scrollTo("#projects")} className="dot-sidebar"></div>
+                  </div>
+                </Fade>
               </div>
             </div>
             <div id="center">
@@ -121,9 +124,11 @@ class Home extends React.Component<IProps, IState> {
             </div>
             <div className="sidebar">
               <div className="sidebar-content">
-                <a target="_blank" href="https://github.com/crisszkutnik"><GitHub /></a>
-                <a target="_blank" href="mailto:crisszkutnik@gmail.com"><Mail /></a>
-                <hr />
+                <Fade bottom>
+                  <a target="_blank" href="https://github.com/crisszkutnik"><GitHub /></a>
+                  <a target="_blank" href="mailto:crisszkutnik@gmail.com"><Mail /></a>
+                  <hr />
+                </Fade>
               </div>
             </div>
           </div>

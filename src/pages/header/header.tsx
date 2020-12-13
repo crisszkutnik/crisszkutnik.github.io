@@ -1,6 +1,7 @@
 import React from "react";
 import "./header.scss";
 import LangContext from "../../LangContext";
+import Fade from "react-reveal/Slide";
 
 export default function Header() {
   /*
@@ -23,6 +24,7 @@ export default function Header() {
 
   return (
     <div id="header">
+      <Fade left>
       <div id="left-side">
         <LangContext.Consumer>
           {(text) => {
@@ -51,6 +53,7 @@ export default function Header() {
           }}
         </LangContext.Consumer>
       </div>
+      </Fade>
     </div>
   )
 }
