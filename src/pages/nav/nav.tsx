@@ -22,6 +22,18 @@ const Nav = (props) => {
     setNav(!displayNav);
   }
 
+  const scroll = (selector: any) => {
+    let type = typeof(selector);
+
+    if(type === "string") // it is a css selector
+      scrollTo(selector)
+    else if(type === "number")
+      window.scrollTo(0, selector)
+
+    if(window.innerWidth < 768) // If it a mobile device, hide the navbar
+      showNav();
+  }
+
   return (
     <Fade top>
       <nav>
@@ -29,16 +41,17 @@ const Nav = (props) => {
           <Logo />
           <FontAwesomeIcon id="nav-slider" onClick={showNav} icon={displayNav ? faTimes : faBars} />
         </div>
+        <Fade>
           <div id="dropdown">
             <LangContext.Consumer>
               {(text) => {
                 if (text)
                   return (
                     <div id="dropdown-links">
-                      <a onClick={() => scrollTo("#header")}>{text.nav_text_1}</a>
-                      <a onClick={() => scrollTo("#about")}>{text.nav_text_2}</a>
-                      <a onClick={() => scrollTo("#projects")}>{text.nav_text_3}</a>
-                      <a onClick={() => window.scrollTo(0, document.body.offsetHeight)}>{text.nav_text_4}</a>
+                      <a onClick={() => scroll("#header")}>{text.nav_text_1}</a>
+                      <a onClick={() => scroll("#about")}>{text.nav_text_2}</a>
+                      <a onClick={() => scroll("#projects")}>{text.nav_text_3}</a>
+                      <a onClick={() => scroll(document.body.offsetHeight)}>{text.nav_text_4}</a>
                     </div>
                   );
                 else
@@ -48,6 +61,7 @@ const Nav = (props) => {
             </LangContext.Consumer>
             <LanguageSlider changeLang={props.changeLang} />
           </div>
+        </Fade>
       </nav>
     </Fade>
   )
