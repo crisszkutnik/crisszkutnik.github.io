@@ -12,14 +12,17 @@ import Langs from "../lang.json";
 import LangContext from "../LangContext";
 import { scrollTo } from "../helpers/funcHelpers";
 import Fade from "react-reveal/Fade";
+import LoadingAnim from "./loadingAnim/loadingAnim";
 
 interface IProps { }
 interface IState {
-  selected: number,
-  headerHeight: number,
-  aboutHeight: number,
-  footerHeight: number,
-  lang: string
+  selected: number;
+  headerHeight: number;
+  aboutHeight: number;
+  footerHeight: number;
+  lang: string;
+  showPage: boolean;
+  doneAnim: boolean;
 }
 
 class Home extends React.Component<IProps, IState> {
@@ -30,15 +33,19 @@ class Home extends React.Component<IProps, IState> {
       headerHeight: 0,
       aboutHeight: 0,
       footerHeight: 0,
+      showPage: false,
+      doneAnim: false,
       lang: "en"
     }
     this.dotFill = this.dotFill.bind(this);
     this.itemHeight = this.itemHeight.bind(this);
     this.sidebarControl = this.sidebarControl.bind(this);
     this.changeLang = this.changeLang.bind(this);
+    this.startPage = this.startPage.bind(this);
   }
 
-  componentDidMount() {
+  startPage() {
+    this.setState({ showPage: true });
     this.itemHeight();
     document.addEventListener("scroll", this.dotFill);
     document.addEventListener("scroll", this.sidebarControl);
@@ -99,41 +106,46 @@ class Home extends React.Component<IProps, IState> {
   render() {
     return (
       <LangContext.Provider value={this.state.lang === "en" ? Langs.en : Langs.es}>
-        <div>
-          <Helmet>
-            <meta charSet="utf-8" />
-            <title>Cristobal Szkutnik</title>
-          </Helmet>
-          <Nav changeLang={this.changeLang} />
-          <div id="page-content">
-            <div className="sidebar">
-              <div className="sidebar-content">
-                <Fade left>
-                  <div id="sidebar-dots">
-                    <div onClick={() => scrollTo("#header")} className="dot-sidebar selected"></div>
-                    <div onClick={() => scrollTo("#about")} className="dot-sidebar"></div>
-                    <div onClick={() => scrollTo("#projects")} className="dot-sidebar"></div>
-                  </div>
-                </Fade>
+        {!this.state.doneAnim &&
+          <LoadingAnim doneAnim={() => this.setState({ doneAnim: true })} showPage={this.startPage}/>
+        }
+        {this.state.showPage &&
+          <div>
+            <Helmet>
+              <meta charSet="utf-8" />
+              <title>Cristobal Szkutnik</title>
+            </Helmet>
+            <Nav changeLang={this.changeLang} />
+            <div id="page-content">
+              <div className="sidebar">
+                <div className="sidebar-content">
+                  <Fade left>
+                    <div id="sidebar-dots">
+                      <div onClick={() => scrollTo("#header")} className="dot-sidebar selected"></div>
+                      <div onClick={() => scrollTo("#about")} className="dot-sidebar"></div>
+                      <div onClick={() => scrollTo("#projects")} className="dot-sidebar"></div>
+                    </div>
+                  </Fade>
+                </div>
+              </div>
+              <div id="center">
+                <Header />
+                <About />
+                <Projects />
+              </div>
+              <div className="sidebar">
+                <div className="sidebar-content">
+                  <Fade bottom>
+                    <a target="_blank" href="https://github.com/crisszkutnik"><GitHub /></a>
+                    <a target="_blank" href="mailto:crisszkutnik@gmail.com"><Mail /></a>
+                    <hr />
+                  </Fade>
+                </div>
               </div>
             </div>
-            <div id="center">
-              <Header />
-              <About />
-              <Projects />
-            </div>
-            <div className="sidebar">
-              <div className="sidebar-content">
-                <Fade bottom>
-                  <a target="_blank" href="https://github.com/crisszkutnik"><GitHub /></a>
-                  <a target="_blank" href="mailto:crisszkutnik@gmail.com"><Mail /></a>
-                  <hr />
-                </Fade>
-              </div>
-            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
+        }
       </LangContext.Provider>
     );
   }
