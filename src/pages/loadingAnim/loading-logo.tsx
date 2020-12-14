@@ -39,7 +39,7 @@ class LoadingLogo extends React.Component<Props, State> {
   }
 
   componentDidMount() {
-    this.interval = setInterval(this.hexagonAnim, 15);
+    this.interval = setInterval(this.hexagonAnim, 10);
   }
 
   hexagonAnim() {
@@ -62,8 +62,8 @@ class LoadingLogo extends React.Component<Props, State> {
         });
         clearInterval(this.interval);
         setTimeout(() => this.setState({ finished: true }), 150);
-        setTimeout(this.props.showPage, 250);
-        setTimeout(this.props.doneAnim, 250);
+        setTimeout(this.props.showPage, 300);
+        setTimeout(this.props.doneAnim, 300);
         return;
       } else
         this.setState({
