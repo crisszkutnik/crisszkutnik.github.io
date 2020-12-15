@@ -1,8 +1,6 @@
 $black-bg: rgba(0,0,0, 0.75);
 
 .project-square {
-	width: 500px;
-	height: 280px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -95,5 +93,10 @@ $black-bg: rgba(0,0,0, 0.75);
 @media (min-width: 768px) {
 	.project-square {
 		margin: 40px 50px;
+		width: 26vw;
+		height: 28vh;
+		min-width: 460px;
+		min-height: 240px;
+		font-size: 1.5vh;
 	}
 }
