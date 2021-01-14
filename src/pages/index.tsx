@@ -114,6 +114,10 @@ class Home extends React.Component<IProps, IState> {
             <Helmet>
               <meta charSet="utf-8" />
               <title>Cristobal Szkutnik</title>
+              <meta 
+                 name="description"
+                 content="The personal webpage of Cristobal Szkutnik"
+              />
             </Helmet>
             <Nav changeLang={this.changeLang} />
             <div id="page-content">
