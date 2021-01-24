@@ -33,9 +33,9 @@ export default function () {
                 <Square
                   title="Sorting Visualizer"
                   text={text.project_2}
-                  tags={["HTML", "CSS", "JavaScript"]}
-                  gh_link="https://github.com/crisszkutnik/sortingvisualizer"
-                  link="https://crisszkutnik.github.io/sortingvisualizer/"
+                  tags={["HTML", "CSS", "TypeScript"]}
+                  gh_link="https://github.com/crisszkutnik/sortingvisualizer-v2"
+                  link="https://crisszkutnik.github.io/sortingvisualizer-v2/"
                 />
               </FadeIn>
               <FadeIn>

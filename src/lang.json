@@ -15,7 +15,7 @@
         "nav_text_3": "Projects",
         "nav_text_4": "Contact",
         "project_1": "Fewest Moves is a website developed for people who want to practice the FMC event. It hosts a weekly competition where 3 scrambles are given to the participants and they have one hour to find the shortest solution they can.",
-        "project_2": "An old page I made that shows how different sorting algorithms work. This is my first project ever made and definitely needs an update.",
+        "project_2": "A simple web app which provides a visual representation of sorting algorithms",
         "project_3": "My portfolio. Yes, it is the page you are looking at. There's not much to tell."
     },
     "es": {
@@ -34,7 +34,7 @@
         "nav_text_3": "Proyectos",
         "nav_text_4": "Contacto",
         "project_1": "Fewest Moves es una página web desarrollado para aquellos que quieran practicar el evento semanal FMC. Se lleva a cabo un evento semanal donde 3 mezclas son dadas a los participantes y tienen una hora para encontrar la solución mas corta posible de cada una.",
-        "project_2": "Una vieja aplicación web que hice que te permite ver como funcionan diferentes algoritmos de ordenamiento. Es el primer proyecto que hice en mi vida y definitivamente necesita una actualización.",
+        "project_2": "Una aplicacion web sencilla que permite visualizar el funcionamiento de algunos algoritmos de ordenamiento.",
         "project_3": "Mi pagina web personal. Si, es la que estas viendo ahora mismo. No hay mucho que decir."
     }
 }
