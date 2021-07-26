@@ -2,7 +2,7 @@
     "en": {
         "header_top": "Hello, I am",
         "header_degree": "Systems engineering student",
-        "header_text": "Hi! I am a 19 year old systems engineering student and full stack developer from Buenos Aires, Argentina. I am most into JavaScript and JS based frameworks like ReactJS, TypeScript and NodeJS. Currently not employed but working on several projects. Keep scrolling to know more about me!",
+        "header_text": "Hi! I am a $AGE year old systems engineering student and developer from Buenos Aires, Argentina. I am most into JavaScript and JS based frameworks like ReactJS, TypeScript and NodeJS. Currently not employed but working on several projects. Keep scrolling to know more about me!",
         "header_btn": "Know me",
         "about_title": "About me",
         "about_text_1": "Hello! I am Cristobal, a software developer and systems engineering student from Buenos Aires, Argentina.",
@@ -21,7 +21,7 @@
     "es": {
         "header_top": "Hola, soy",
         "header_degree": "Estudiante de ingenieria en sistemas",
-        "header_text": "¡Hola! Soy un estudiante de ingeniería en sistemas de información y desarrollador full stack de Buenos Aires, Argentina. Me especializo principalmente en JavaScript y frameworks basados en este, como ReactJS, TypeScript y NodeJS. Actualmente no tengo empleo, pero trabajo en diferentes proyectos. ¡Seguí bajando para saber más sobre mí!",
+        "header_text": "¡Hola! Soy un estudiante de Ingeniería en Sistemas de Información y desarrollador de Buenos Aires, Argentina. Me especializo principalmente en JavaScript y frameworks basados en este, como ReactJS, TypeScript y NodeJS. Actualmente no tengo empleo, pero trabajo en diferentes proyectos. ¡Seguí bajando para saber más sobre mí!",
         "header_btn": "Conoce mas",
         "about_title": "Sobre mi",
         "about_text_1": "",

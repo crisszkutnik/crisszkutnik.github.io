@@ -22,6 +22,14 @@ export default function Header() {
     bottomsvg.style.top = window.innerHeight - height + "px";
   }*/
 
+  const setAge = (text: String) => {
+    let bornDate = new Date(2001, 3, 25);
+    let ageDate = new Date(Date.now() - bornDate.getTime()).getUTCFullYear() - 1970 + "";
+    // JS dates start at 1970
+
+    return text.replace("$AGE", ageDate);
+  }
+
   return (
     <div id="header">
       <Fade left>
@@ -40,7 +48,7 @@ export default function Header() {
                   </div>
                   <div id="description-text">
                     <p>
-                    {text.header_text}
+                    {setAge(text.header_text)}
                   </p>
                   </div>
                   <div id="header-button">
