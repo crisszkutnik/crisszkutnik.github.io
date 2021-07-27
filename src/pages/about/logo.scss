@@ -76,4 +76,194 @@
     }
 }
 
-// "#61dafb"
+@media (max-width: 767px) {
+    #about-techs {
+        margin-top: 0px;
+    
+        .about-techs-item {
+            margin: 35px 0;
+        }
+    }
+
+    .tech-logo {
+        margin: 0px 3.5vw;
+    
+        .tech-logo-img {
+            $size: 12vw;
+    
+            svg {
+                width: $size;
+                height: $size;
+    
+            }
+    
+            h3 {
+                color: $red;
+                height: $size;
+                line-height: $size;
+                text-align: center;
+            }
+        }
+    
+        .tech-logo-text {
+            margin-top: 12px;
+            
+            p {
+                font-size: 3.5vw;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #about-techs {
+        margin-top: 0px;
+    
+        .about-techs-item {
+            margin: 45px 0;
+        }
+    }
+
+    .tech-logo {
+        margin: 0px 4vw;
+    
+        .tech-logo-img {
+            $size: 10vw;
+    
+            svg {
+                width: $size;
+                height: $size;
+    
+            }
+    
+            h3 {
+                color: $red;
+                height: $size;
+                line-height: $size;
+                text-align: center;
+            }
+        }
+    
+        .tech-logo-text {
+            margin-top: 13px;
+            
+            p {
+                font-size: 3vw;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #about-techs {
+        margin-top: 120px;
+    
+        .about-techs-item {
+            margin: 30px 0;
+        }
+    }
+
+    .tech-logo {
+        margin: 0px 12px;
+    
+        .tech-logo-img {
+            $size: 4.5vw;
+    
+            svg {
+                width: $size;
+                height: $size;
+    
+            }
+    
+            h3 {
+                color: $red;
+                height: $size;
+                line-height: $size;
+                text-align: center;
+            }
+        }
+    
+        .tech-logo-text {
+            margin-top: 5px;
+            
+            p {
+                font-size: 1.5vw;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    #about-techs {
+        margin-top: 120px;
+    
+        .about-techs-item {
+            margin: 30px 0;
+        }
+    }
+
+    .tech-logo {
+        margin: 0px 20px;
+    
+        .tech-logo-img {
+            $size: 3.5vw;
+    
+            svg {
+                width: $size;
+                height: $size;
+    
+            }
+    
+            h3 {
+                color: $red;
+                height: $size;
+                line-height: $size;
+                text-align: center;
+            }
+        }
+    
+        .tech-logo-text {
+            margin-top: 5px;
+            
+            p {
+                font-size: 1.4vw;
+            }
+        }
+    }
+}
+
+@media (min-width: 1500px) {
+    #about-techs {
+        margin-top: 120px;
+    
+        .about-techs-item {
+            margin: 30px 0;
+        }
+    }
+
+    .tech-logo {
+        margin: 0px 20px;
+    
+        .tech-logo-img {
+            $size: 3vw;
+    
+            svg {
+                width: $size;
+                height: $size;
+    
+            }
+    
+            h3 {
+                color: $red;
+                height: $size;
+                line-height: $size;
+                text-align: center;
+            }
+        }
+    
+        .tech-logo-text {
+            margin-top: 5px;
+        }
+    }
+}
+  
