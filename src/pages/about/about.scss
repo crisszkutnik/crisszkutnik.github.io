@@ -27,6 +27,7 @@
     display: flex;
     flex-direction: column;
     text-align: justify;
+    justify-content: center;
 
     p {
       color: white;
@@ -97,7 +98,7 @@
   }
 
   #about-img {
-    $perc: 18vw;
+    $perc: 15vw;
     width: $perc;
     height: $perc + 5vw;
     margin-right: 150px; // Relative to #img-outline translate-x

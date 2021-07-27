@@ -35,8 +35,6 @@ const About = () => {
                       <br />
                       <br />
                       {text.about_text_3}
-                      <br />
-                      <br />
                     </p>
                   </div>
                 </div>
