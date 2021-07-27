@@ -5,8 +5,7 @@ function PythonLogo() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="110.421"
-      height="109.846"
+      viewBox="0 0 110.421 109.846"
       version="1"
     >
       <defs>

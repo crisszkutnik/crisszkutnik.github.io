@@ -17,42 +17,48 @@ import ExpressLogo from '../../assets/tech-logos/Express';
 const AllLogos = () => {
     return (
         <div id='about-techs'>
-            <Logo text="JavaScript">
-                <JSLogo />
-            </Logo>
-            <Logo text="TypeScript">
-                <TSLogo />
-            </Logo>
-            <Logo text="C">
-                <CLogo />
-            </Logo>
-            <Logo text="Python">
-                <PythonLogo />
-            </Logo>
-            <Logo text="ReactJS">
-                <ReactLogo />
-            </Logo>
-            <Logo text="SCSS">
-                <SCSSLogo />
-            </Logo>
-            <Logo text="NodeJS">
-                <NodeJSLogo />
-            </Logo>
-            <Logo text="express.js">
-                <ExpressLogo />
-            </Logo>
-            <Logo text="MongoDB">
-                <MongoLogo />
-            </Logo>
-            <Logo text="Linux">
-                <LinuxLogo />
-            </Logo>
-            <Logo text="Shell scripting">
-                <ShellLogo />
-            </Logo>
-            <Logo text="Git">
-                <GitLogo />
-            </Logo>
+            <div className='about-techs-item' id='about-techs-langs'>
+                <Logo text="JavaScript">
+                    <JSLogo />
+                </Logo>
+                <Logo text="TypeScript">
+                    <TSLogo />
+                </Logo>
+                <Logo text="C">
+                    <CLogo />
+                </Logo>
+                <Logo text="Python">
+                    <PythonLogo />
+                </Logo>
+            </div>
+            <div className='about-techs-item' id='about-techs-frameworks'>
+                <Logo text="ReactJS">
+                    <ReactLogo />
+                </Logo>
+                <Logo text="SCSS">
+                    <SCSSLogo />
+                </Logo>
+                <Logo text="NodeJS">
+                    <NodeJSLogo />
+                </Logo>
+                <Logo text="express.js">
+                    <ExpressLogo />
+                </Logo>
+            </div>
+            <div className='about-techs-item' id='about-techs-other'>
+                <Logo text="MongoDB">
+                    <MongoLogo />
+                </Logo>
+                <Logo text="Linux">
+                    <LinuxLogo />
+                </Logo>
+                <Logo text="Shell scripting">
+                    <ShellLogo />
+                </Logo>
+                <Logo text="Git">
+                    <GitLogo />
+                </Logo>
+            </div>
         </div>
     );
 }
