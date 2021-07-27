@@ -2,6 +2,7 @@ import React from "react";
 import "./about.scss";
 import LangContext from "../../LangContext";
 import FadeIn from "../../helpers/fadeIn";
+import AllLogos from "./allLogos";
 
 const About = () => {
   return (
@@ -37,24 +38,11 @@ const About = () => {
                       <br />
                       <br />
                     </p>
-                    <div id="lang-list">
-                      <ul>
-                        <li>ReactJS</li>
-                        <li>SCSS</li>
-                        <li>Gatsby</li>
-                      </ul>
-                      <ul>
-                        <li>NodeJS</li>
-                        <li>Express.js</li>
-                        <li>Mongoose</li>
-                      </ul>
-                      <ul>
-                        <li>TypeScript</li>
-                        <li>Git/Github</li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
+              </FadeIn>
+              <FadeIn>
+                <AllLogos />
               </FadeIn>
             </div>
           );
