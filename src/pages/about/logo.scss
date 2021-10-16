@@ -117,18 +117,18 @@
 
 @media (min-width: 768px) {
     #about-techs {
-        margin-top: 0px;
+        margin-top: 80px;
     
         .about-techs-item {
-            margin: 45px 0;
+            margin: 20px 0;
         }
     }
 
     .tech-logo {
-        margin: 0px 4vw;
+        margin: 0px 3vw;
     
         .tech-logo-img {
-            $size: 10vw;
+            $size: 7vw;
     
             svg {
                 width: $size;
@@ -148,7 +148,7 @@
             margin-top: 13px;
             
             p {
-                font-size: 3vw;
+                font-size: 2.75vw;
             }
         }
     }

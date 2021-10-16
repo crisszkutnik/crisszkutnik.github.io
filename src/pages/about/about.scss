@@ -50,7 +50,6 @@
 
   #about-img {
     position: relative;
-    margin-right: 150px; // Relative to #img-outline translate-x
 
     #img-bg {
       background: url("../../assets/me.jpg");
@@ -68,10 +67,8 @@
 
     #img-outline {
       position: absolute;
-      border: 10px solid transparent;
       border-image-source: linear-gradient(142.54deg, #e94560 50.85%, #ff6b00 140.53%);
       border-image-slice: 5;
-      transform: translate(45px, 45px);
       top: 0;
       z-index: 0;
       transition: all 0.25s ease-in-out;
@@ -143,6 +140,8 @@
     }
 
     #img-outline {
+      border: 5px solid transparent;
+      transform: translate(25px, 25px);
       width: $perc;
       height: $perc + 5vw;
     }
@@ -156,7 +155,35 @@
 }
 
 @media (min-width: 1200px) {
+  #about {
+    padding: 0 7.5vw;
+    font-size: 1.15vw;
+  }
+
+  #about-text {
+    font-size: 1.25vw;
+  }
+
+  #about-img {
+    $perc: 15vw;
+    width: $perc;
+    height: $perc + 5vw;
+    margin-right: 150px; // Relative to #img-outline translate-x
+
+    #img-bg {
+      width: $perc;
+      height: $perc + 5vw;
+    }
+
+    #img-outline {
+      border: 10px solid transparent;
+      transform: translate(45px, 45px);
+      width: $perc;
+      height: $perc + 5vw;
+    }
+  }
 }
 
 @media (min-width: 1500px) {
+  // Empty
 }
