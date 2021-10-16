@@ -13,6 +13,7 @@ import LangContext from "../LangContext";
 import { scrollTo } from "../helpers/funcHelpers";
 import Fade from "react-reveal/Fade";
 import LoadingAnim from "./loadingAnim/loadingAnim";
+import LinkedIn from "../assets/linkedin";
 
 interface IProps { }
 interface IState {
@@ -107,16 +108,16 @@ class Home extends React.Component<IProps, IState> {
     return (
       <LangContext.Provider value={this.state.lang === "en" ? Langs.en : Langs.es}>
         {!this.state.doneAnim &&
-          <LoadingAnim doneAnim={() => this.setState({ doneAnim: true })} showPage={this.startPage}/>
+          <LoadingAnim doneAnim={() => this.setState({ doneAnim: true })} showPage={this.startPage} />
         }
         {this.state.showPage &&
           <div>
             <Helmet>
               <meta charSet="utf-8" />
               <title>Cristobal Szkutnik</title>
-              <meta 
-                 name="description"
-                 content="The personal webpage of Cristobal Szkutnik"
+              <meta
+                name="description"
+                content="The personal webpage of Cristobal Szkutnik"
               />
             </Helmet>
             <Nav changeLang={this.changeLang} />
@@ -140,6 +141,7 @@ class Home extends React.Component<IProps, IState> {
               <div className="sidebar">
                 <div className="sidebar-content">
                   <Fade bottom>
+                    <a target="_blank" href="https://www.linkedin.com/in/crisszkutnik/"><LinkedIn /></a>
                     <a target="_blank" href="https://github.com/crisszkutnik"><GitHub /></a>
                     <a target="_blank" href="mailto:crisszkutnik@gmail.com"><Mail /></a>
                     <hr />

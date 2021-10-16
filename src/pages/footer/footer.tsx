@@ -3,6 +3,7 @@ import GitHub from "../../assets/github"
 import Mail from "../../assets/mail"
 import "./footer.scss";
 import LangContext from "../../LangContext"
+import LinkedIn from "../../assets/linkedin";
 
 const Footer = () => {
 	return (
@@ -17,11 +18,15 @@ const Footer = () => {
 									<hr />
 									<div id="logos">
 										<div className="footer-logo">
+											<a target="_blank" href="https://www.linkedin.com/in/crisszkutnik/"><LinkedIn /></a>
+										</div>
+										<div className="footer-logo">
 											<a target="_blank" href="https://github.com/crisszkutnik"><GitHub /></a>
 										</div>
 										<div className="footer-logo">
 											<a target="_blank" href="mailto:crisszkutnik@gmail.com"><Mail /></a>
 										</div>
+										
 									</div>
 									<hr />
 								</div>

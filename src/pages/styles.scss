@@ -39,10 +39,10 @@ $poppins: 'Poppins', sans-serif;
 
 			svg {
 				fill: $colour;
-				$dim: 50px;
-				height: 50px;
-				width: 50px;
-				margin-bottom: 50px;
+				$dim: 40px;
+				height: $dim;
+				width: $dim;
+				margin-bottom: $dim;
 				transition: all 0.25s ease-in-out;
 			}
 
@@ -52,8 +52,8 @@ $poppins: 'Poppins', sans-serif;
 			}
 
 			hr {
-				height: 30%;
-				width: 3px;
+				height: 20%;
+				width: 2px;
 				border: none;
 				background: $colour;
 			}
