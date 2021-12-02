@@ -13,6 +13,7 @@ import ShellLogo from '../../assets/tech-logos/Shell';
 import LinuxLogo from '../../assets/tech-logos/Linux';
 import MongoLogo from '../../assets/tech-logos/MongoDB';
 import ExpressLogo from '../../assets/tech-logos/Express';
+import SQLLogo from '../../assets/tech-logos/SQL';
 
 const AllLogos = () => {
     return (
@@ -46,6 +47,9 @@ const AllLogos = () => {
                 </Logo>
             </div>
             <div className='about-techs-item' id='about-techs-other'>
+                <Logo text="SQL">
+                    <SQLLogo />
+                </Logo>
                 <Logo text="MongoDB">
                     <MongoLogo />
                 </Logo>

@@ -67,8 +67,8 @@
 
     #img-outline {
       position: absolute;
-      border-image-source: linear-gradient(142.54deg, #e94560 50.85%, #ff6b00 140.53%);
-      border-image-slice: 5;
+      border-image-source: linear-gradient(142.54deg, #e94560 50.85%, #ff6b00 140.53%) !important;
+      border-image-slice: 5 !important;
       top: 0;
       z-index: 0;
       transition: all 0.25s ease-in-out;
@@ -109,8 +109,10 @@
       }
 
       #img-outline {
+        border: 7.5px solid transparent;
         width: $perc;
         height: $perc + 50px;
+        transform: translate(35px, 35px);
       }
     }
     #about-text {
