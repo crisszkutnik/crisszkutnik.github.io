@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"/b1x":function(e,t,a){"use strict";a.r(t);var c=a("q1tI"),n=a.n(c);t.default=function(e){return n.a.createElement("div",{className:"tech-logo"},n.a.createElement("div",{className:"tech-logo-img"},e.children),n.a.createElement("div",{className:"tech-logo-text"},n.a.createElement("p",null,e.text)))}}}]);
+//# sourceMappingURL=component---src-pages-about-logo-tsx-d18504e4cef27eed9a55.js.map
